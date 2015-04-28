@@ -38,7 +38,7 @@ void ASTUtils::pop_scope() {
 }
 
 
-ASTNode * ASTUtils::mk_tree_root(ASTNode * mainClassNode, ASTNode * classNode) {
+ASTNode * mk_tree_root(ASTNode * node1, ASTNode * node2) {
 	assert(mainClassNode != NULL);
 	if (classNode != NULL) {
 		set_root_node(mainClassNode);
@@ -48,148 +48,146 @@ ASTNode * ASTUtils::mk_tree_root(ASTNode * mainClassNode, ASTNode * classNode) {
 	return root;
 }
 
-ASTNode * ASTUtils::mk_main_node(string id, string argsId, ASTNode * statements) {
+ASTNode * mk_main_node(ASTNode * node1, ASTNode * node2, ASTNode * node3) {
 
 }
 
-
-ASTNode * ASTUtils::mk_class_decl_node($2, $4, $5, $7) {
-
-}
-
-ASTNode * ASTUtils::mk_var_decl_list_node($1,$2) {
+ASTNode * mk_class_decl_node(ASTNode * node1, ASTNode * node2, ASTNode * node3, ASTNode * node4) {
 
 }
 
-ASTNode * ASTUtils::mk_var_decl_node($1,$2) {
+ASTNode * mk_var_decl_list_node(ASTNode * node1, ASTNode * node2) {
 
 }
 
-ASTNode * ASTUtils::mk_method_decl_node($2, $3, $5, $8, $9, $11, $14) {
+ASTNode * mk_var_decl_node(ASTNode * node1, ASTNode * node2) {
 
 }
 
-ASTNode * ASTUtils::mk_formal_list_node($1,$2,$3)  {
+ASTNode * mk_method_decl_node(ASTNode * node1, ASTNode * node2, ASTNode * node3, ASTNode * node4, ASTNode * node5, ASTNode * node6, ASTNode * node7) {
 
 }
 
-ASTNode * ASTUtils::mk_formal_rest_node($2,$3,$4) {
+ASTNode * mk_formal_list_node(ASTNode * node1, ASTNode * node2, ASTNode * node3)  {
 
 }
 
-ASTNode * ASTUtils::mk_array_type_node() {
+ASTNode * mk_formal_rest_node(ASTNode * node1, ASTNode * node2, ASTNode * node3) {
 
 }
 
-ASTNode * ASTUtils::mk_bool_type_node() {
+ASTNode * mk_array_type_node() {
 
 }
 
-ASTNode * ASTUtils::mk_int_type_node() {
+ASTNode * mk_bool_type_node() {
 
 }
 
-ASTNode * ASTUtils::mk_class_type_node() {
+ASTNode * mk_int_type_node() {
 
 }
 
-ASTNode * ASTUtils::mk_stmt_list_node($1, $2) {
+ASTNode * mk_class_type_node() {
 
 }
 
-ASTNode * ASTUtils::mk_print_node($7) {
+ASTNode * mk_stmt_list_node(ASTNode * node1, ASTNode * node2) {
 
 }
 
-ASTNode * ASTUtils::mk_assign_node($1, $3) {
+ASTNode * mk_print_node(ASTNode * node1) {
 
 }
 
-ASTNode * ASTUtils::mk_array_assign_node($1, $3, $6) {
+ASTNode * mk_assign_node(ASTNode * node1, ASTNode * node2) {
 
 }
 
-ASTNode * ASTUtils::mk_if_node($3, $5, $7) {
+ASTNode * mk_array_assign_node(ASTNode * node1, ASTNode * node2, ASTNode * node3) {
 
 }
 
-ASTNode * ASTUtils::mk_while_node($3, $5) {
+ASTNode * mk_if_node(ASTNode * node1, ASTNode * node2, ASTNode * node3) {
 
 }
 
-ASTNode * ASTUtils::mk_and_expr_node($1, $3) {
+ASTNode * mk_while_node(ASTNode * node1, ASTNode * node2) {
 
 }
 
-ASTNode * ASTUtils::mk_lt_expr_node($1, $3) {
+ASTNode * mk_and_expr_node(ASTNode * node1, ASTNode * node2) {
 
 }
 
-ASTNode * ASTUtils::mk_add_node($1, $3) {
+ASTNode * mk_lt_expr_node(ASTNode * node1, ASTNode * node2) {
 
 }
 
-ASTNode * ASTUtils::mk_sub_node($1, $3) {
+ASTNode * mk_add_node(ASTNode * node1, ASTNode * node2) {
 
 }
 
-ASTNode * ASTUtils::mk_mul_node($1, $3) {
+ASTNode * mk_sub_node(ASTNode * node1, ASTNode * node2) {
 
 }
 
-ASTNode * ASTUtils::mk_int_val_node($1) {
+ASTNode * mk_mul_node(ASTNode * node1, ASTNode * node2) {
 
 }
 
-ASTNode * ASTUtils::mk_true_node() {
+ASTNode * mk_int_val_node(ASTNode * node1) {
 
 }
 
-ASTNode * ASTUtils::mk_false_node() {
+ASTNode * mk_true_node() {
 
 }
 
-ASTNode * ASTUtils::get_id_node($1) {
+ASTNode * mk_false_node() {
 
 }
 
-ASTNode * ASTUtils::mk_this_node() {
+ASTNode * get_id_node(ASTNode * node1) {
 
 }
 
-ASTNode * ASTUtils::mk_read_int_node() {
+ASTNode * mk_this_node() {
 
 }
 
-ASTNode * ASTUtils::mk_new_int_array_node($4) {
+ASTNode * mk_read_int_node() {
 
 }
 
-ASTNode * ASTUtils::mk_new_object($2) {
+ASTNode * mk_new_int_array_node(ASTNode * node1) {
 
 }
 
-ASTNode * ASTUtils::mk_not_expr_node($2) {
+ASTNode * mk_new_object(ASTNode * node1) {
 
 }
 
-ASTNode * ASTUtils::mk_length_expr_node($1, $3) {
+ASTNode * mk_not_expr_node(ASTNode * node1) {
 
 }
 
-ASTNode * ASTUtils::mk_array_index_expr_node($1, $3) {
+ASTNode * mk_length_expr_node(ASTNode * node1, ASTNode * node2) {
 
 }
 
-ASTNode * ASTUtils::mk_function_call_node($1, $3, $5) {
+ASTNode * mk_array_index_expr_node(ASTNode * node1, ASTNode * node2) {
 
 }
 
-ASTNode * ASTUtils::mk_expr_list_node($1, $2) {
+ASTNode * mk_function_call_node(ASTNode * node1, ASTNode * node2, ASTNode * node3) {
 
 }
 
-ASTNode * ASTUtils::mk_expr_rest_node($2, $3) {
+ASTNode * mk_expr_list_node(ASTNode * node1, ASTNode * node2) {
 
 }
 
+ASTNode * mk_expr_rest_node(ASTNode * node1, ASTNode * node2) {
+
+}

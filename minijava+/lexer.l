@@ -2,7 +2,7 @@
 #include<iostream>
 #include<string>
 #include "parser.tab.h"
-#include "header.h"
+#include "includes.hpp"
 using namespace std;
 
 #ifdef DEBUG

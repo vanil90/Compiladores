@@ -1,5 +1,5 @@
 %{
-#include "header.h"
+#include "includes.hpp"
 int yyerror(char const *s);
 int yylex(void);
 %}
@@ -37,12 +37,13 @@ Program:	MainClass ClassDecl									 {$$ = mk_tree_root($1, $2); }
 
 MainClass:	CLASS ID '{' PUBLIC STATIC VOID MAIN '(' STRING '[' ']' ID ')' '{' Statements '}' '}'    {$$ = mk_main_node($2,$12,$15); }
 	;
-_vre
+
 ClassDecl: 	CLASS ID '{' VarDecl MethodDecl '}' ClassDecl 						 {$$ = mk_class_decl_node($2, $4, $5, $7); }
 	|	CLASS ID EXTENDS ID '{' VarDecl MethodDecl '}' ClassDecl 
-	|												 {$$ = NULL;}							     ;
+	|												 {$$ = NULL; }
+	;
 
-VarDecl:	VarDecl VarDeclAux 									 {$$ = mk_var_decl_list_node($1,$2); }
+VarDecl:	VarDecl VarDeclAux 									 {$$ = mk_var_decl_list_node($1,$2); } /* MODIFICAR DECLARAÇÕES */
 	|	VarDecl error ';' 
 	|												 {$$ = NULL;}
 	;
